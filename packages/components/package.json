@@ -1,0 +1,49 @@
+{
+  "name": "components",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Naoki Mita <naoki.mita18@gmail.com>",
+  "homepage": "https://github.com/nk18chi/lerna-playground#readme",
+  "license": "ISC",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nk18chi/lerna-playground.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/components.test.js",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "bugs": {
+    "url": "https://github.com/nk18chi/lerna-playground/issues"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.46",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react-dom": "^18.2.18",
+    "rollup": "^4.9.1"
+  }
+}
