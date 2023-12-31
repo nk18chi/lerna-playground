@@ -21,7 +21,9 @@
   "scripts": {
     "test": "node ./__tests__/components.test.js",
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "bugs": {
     "url": "https://github.com/nk18chi/lerna-playground/issues"
@@ -43,7 +45,16 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-replace": "^5.0.5",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-vite": "^7.6.6",
+    "@storybook/test": "^7.6.6",
     "@types/react-dom": "^18.2.18",
-    "rollup": "^4.9.1"
+    "rollup": "^4.9.1",
+    "storybook": "^7.6.6"
   }
 }
