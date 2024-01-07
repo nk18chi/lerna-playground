@@ -1,6 +1,6 @@
 name: Create Release Pull Request
 
-run-name: Create release PR for v${{ github.event.inputs.version }}
+run-name: Create release PR for ${{ github.event.head_commit.message }}
 
 on:
   push:
@@ -22,24 +22,22 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "20"
 
-      - name: Bump version and push
+      - name: Create a release branch with bumping version and pushing it to the remote
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git checkout -b release/$NEW_VERSION
-          npx lerna version ${{ github.event.inputs.release-type }}" --yes
-          git add **/package.json package-lock.json lerna.json
-          git commit -m "Release extension version $NEW_VERSION"
-          git push --set-upstream origin release/$NEW_VERSION
-          echo "new_version=$NEW_VERSION" >> $GITHUB_ENV
+          LAST_COMMIT_SHORT_ID=$(git rev-parse --short HEAD)
+          git checkout -b release/$LAST_COMMIT_SHORT_ID
+          npx lerna version
+          echo "last_commit_short_id=$LAST_COMMIT_SHORT_ID" >> $GITHUB_ENV
       - name: Create PR
         run: |
           gh pr create \
-            --title "Release version ${{ env.new_version }}" \
-            --body "Release version ${{ env.new_version }}" \
+            --title "Release PR for ${{ env.last_commit_short_id }}" \
+            --body "Github Action automatically creates a release PR for ${{ github.event.head_commit.message }}" \
             --base main \
-            --head release/${{ env.new_version }}
+            --head release/${{ env.last_commit_short_id }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
