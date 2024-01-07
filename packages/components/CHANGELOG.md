@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2024-01-07)
+
+**Note:** Version bump only for package components
+
+
+
+
+
+# 0.2.0 (2024-01-07)
+
+
+
+## 0.0.3 (2024-01-06)
+
+
+
+## 0.0.2 (2024-01-06)
+
+
+
+## 0.0.1 (2024-01-06)
+
+
+### Features
+
+* **components:** create a component package and connect it with frontend ([2866d82](https://github.com/nk18chi/lerna-playground/commit/2866d82cc4bfedd542c6ded25d8c7ac4cb7fcf93))
+* **components:** install storybook into component package ([ca9ccd6](https://github.com/nk18chi/lerna-playground/commit/ca9ccd6c5251fc0a22c00127505cf79b3c5bbd23))
+
+
+
+
+
 ## 0.1.2 (2024-01-07)
 
 **Note:** Version bump only for package components
