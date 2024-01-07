@@ -1,6 +1,6 @@
 name: Create Release Pull Request
 
-run-name: Create release PR for ${{ github.event.head_commit.message }}
+run-name: Create release PR for ${{ github.sha }}
 
 on:
   push:
@@ -30,13 +30,14 @@ jobs:
           git config --global user.name "GitHub Actions"
           LAST_COMMIT_SHORT_ID=$(git rev-parse --short HEAD)
           git checkout -b release/$LAST_COMMIT_SHORT_ID
+          git push origin release/$LAST_COMMIT_SHORT_ID
           npx lerna version
           echo "last_commit_short_id=$LAST_COMMIT_SHORT_ID" >> $GITHUB_ENV
       - name: Create PR
         run: |
           gh pr create \
             --title "Release PR for ${{ env.last_commit_short_id }}" \
-            --body "Github Action automatically creates a release PR for ${{ github.event.head_commit.message }}" \
+            --body "${{ github.event.head_commit.message }}" \
             --base main \
             --head release/${{ env.last_commit_short_id }}
         env:
