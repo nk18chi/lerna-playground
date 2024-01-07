@@ -33,7 +33,7 @@ jobs:
           git push origin release/$LAST_COMMIT_SHORT_ID
           npx lerna version
           echo "last_commit_short_id=$LAST_COMMIT_SHORT_ID" >> $GITHUB_ENV
-      - name: Create PR
+      - name: Create a release pull request
         run: |
           gh pr create \
             --title "Release PR for ${{ env.last_commit_short_id }}" \
