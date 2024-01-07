@@ -26,8 +26,8 @@ jobs:
 
       - name: Create a release branch with bumping version and pushing it to the remote
         run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           LAST_COMMIT_SHORT_ID=$(git rev-parse --short HEAD)
           git checkout -b release/$LAST_COMMIT_SHORT_ID
           git push origin release/$LAST_COMMIT_SHORT_ID
