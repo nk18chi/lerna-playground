@@ -9,8 +9,7 @@
   "version": "independent",
   "command": {
     "version": {
-      "conventionalCommits": true,
-      "changelogPreset": "angular-all"
+      "conventionalCommits": true
     }
   }
 }
