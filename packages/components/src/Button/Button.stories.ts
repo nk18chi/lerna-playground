@@ -19,9 +19,3 @@ export const Primary: Story = {
     label: "Primary Button",
   },
 };
-
-export const Secondary: Story = {
-  args: {
-    label: "Secondary Button",
-  },
-};
