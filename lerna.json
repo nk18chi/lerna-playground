@@ -6,5 +6,11 @@
     "**/package.json",
     "**/*.md"
   ],
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "version": {
+      "conventionalCommits": true,
+      "changelogPreset": "angular-all"
+    }
+  }
 }
