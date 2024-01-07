@@ -6,6 +6,9 @@
     "**/package.json",
     "**/*.md"
   ],
+  "packages": [
+    "packages/*"
+  ],
   "version": "independent",
   "command": {
     "version": {
