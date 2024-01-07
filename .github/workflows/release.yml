@@ -42,3 +42,5 @@ jobs:
             --head release/${{ env.last_commit_short_id }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Enable auto-merge
+        run: gh pr merge release/${{ env.last_commit_short_id }} --squash --auto
