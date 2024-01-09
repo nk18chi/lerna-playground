@@ -6,7 +6,7 @@ export interface ButtonProps {
 
 const Button = ({ label }: ButtonProps) => {
   return (
-    <button id='button' className='button-class'>
+    <button id='button' className='button-class' data-test-id='button'>
       {label}
     </button>
   );
