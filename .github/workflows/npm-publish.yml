@@ -1,6 +1,6 @@
-name: Publish NPM packages
+name: Publish NPM Packages
 
-run-name: Publish NPM packages for ${{ github.sha }}
+run-name: Publish NPM Packages for ${{ github.sha }}
 
 on:
   pull_request:
@@ -10,6 +10,7 @@ on:
 
 jobs:
   npm-publish:
+    name: Publish NPM Packages
     runs-on: ubuntu-latest
 
     env:
