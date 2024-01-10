@@ -58,6 +58,6 @@
     "storybook": "^7.6.6"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@nk18chi"
   }
 }
