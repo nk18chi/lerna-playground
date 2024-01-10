@@ -14,5 +14,8 @@
       "disableScopeLowerCase": true,
       "disableSubjectLowerCase": true
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
