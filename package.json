@@ -15,7 +15,11 @@
       "disableSubjectLowerCase": true
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nk18chi/lerna-playground.git"
+  },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@nk18chi"
   }
 }
