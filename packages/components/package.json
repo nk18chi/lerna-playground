@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "@nk18chi/components",
   "version": "0.2.8",
   "description": "> TODO: description",
   "author": "Naoki Mita <naoki.mita18@gmail.com>",
@@ -57,6 +57,6 @@
     "storybook": "^7.6.6"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@nk18chi"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
