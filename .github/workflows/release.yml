@@ -49,4 +49,4 @@ jobs:
             --base main \
             --head release/${{ env.last_commit_short_id }}
       - name: Enable auto-merge
-        run: gh pr merge release/${{ env.last_commit_short_id }} --squash --auto
+        run: gh pr merge release/${{ env.last_commit_short_id }} --merge --auto
