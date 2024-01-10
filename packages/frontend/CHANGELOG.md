@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<<<<<<< HEAD
 ## 0.2.4 (2024-01-09)
 
 **Note:** Version bump only for package frontend
@@ -11,6 +12,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+=======
+>>>>>>> 2bcd3d98976933229267f9c9aaca74358509b65f
 ## 0.2.3 (2024-01-09)
 
 **Note:** Version bump only for package frontend

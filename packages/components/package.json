@@ -1,6 +1,10 @@
 {
   "name": "components",
+<<<<<<< HEAD
   "version": "0.2.4",
+=======
+  "version": "0.2.3",
+>>>>>>> 2bcd3d98976933229267f9c9aaca74358509b65f
   "description": "> TODO: description",
   "author": "Naoki Mita <naoki.mita18@gmail.com>",
   "homepage": "https://github.com/nk18chi/lerna-playground#readme",

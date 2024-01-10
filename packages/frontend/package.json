@@ -1,6 +1,10 @@
 {
   "name": "frontend",
+<<<<<<< HEAD
   "version": "0.2.4",
+=======
+  "version": "0.2.3",
+>>>>>>> 2bcd3d98976933229267f9c9aaca74358509b65f
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +13,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "components": "^0.2.4",
+=======
+    "components": "^0.2.3",
+>>>>>>> 2bcd3d98976933229267f9c9aaca74358509b65f
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"
