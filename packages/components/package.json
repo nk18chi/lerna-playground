@@ -56,5 +56,8 @@
     "@types/react-dom": "^18.2.18",
     "rollup": "^4.9.1",
     "storybook": "^7.6.6"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
