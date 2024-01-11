@@ -18,9 +18,6 @@ jobs:
       contents: write
       pull-requests: write
 
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
     if: github.event.pull_request.merged == true
 
     steps:
@@ -41,6 +38,8 @@ jobs:
           git checkout -b release/$LAST_COMMIT_SHORT_ID
           git push origin release/$LAST_COMMIT_SHORT_ID
           echo "last_commit_short_id=$LAST_COMMIT_SHORT_ID" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create a release pull request for main branch
         run: |
           gh pr create \
@@ -48,6 +47,8 @@ jobs:
             --body "${{ github.event.head_commit.message }}" \
             --base main \
             --head release/${{ env.last_commit_short_id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Authenticate cli with a PAT
         run: echo "${{ secrets.DEPENDABOT_TOKEN }}" | gh auth login --with-token
       - name: Enable auto-merge
