@@ -14,9 +14,6 @@
   "files": [
     "dist"
   ],
-  "repository": {
-    "url": "https://github.com/nk18chi/lerna-playground.git"
-  },
   "scripts": {
     "test": "node ./__tests__/components.test.js",
     "build": "rollup -c",
@@ -56,7 +53,10 @@
     "rollup": "^4.9.1",
     "storybook": "^7.6.6"
   },
+  "repository": {
+    "url": "https://github.com/nk18chi/lerna-playground.git"
+  },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@nk18chi"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
