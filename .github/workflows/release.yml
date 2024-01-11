@@ -28,8 +28,7 @@ jobs:
           node-version: "20"
 
       - name: NPM Install
-        with:
-          run: npm install
+        run: npm install
 
       - name: Create a new commit to bump version
         run: |
