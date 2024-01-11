@@ -48,5 +48,7 @@ jobs:
             --body "${{ github.event.head_commit.message }}" \
             --base main \
             --head release/${{ env.last_commit_short_id }}
+      - name: Authenticate cli with a PAT
+        run: echo "${{ secrets.DEPENDABOT_TOKEN }}" | gh auth login --with-token
       - name: Enable auto-merge
         run: gh pr merge release/${{ env.last_commit_short_id }} --merge --auto
