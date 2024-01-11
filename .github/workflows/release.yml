@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: "20"
 
+      - name: NPM Install
+        with:
+          run: npm install
+
       - name: Create a new commit to bump version
         run: |
           git config user.name "github-actions[bot]"
