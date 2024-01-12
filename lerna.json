@@ -4,7 +4,9 @@
     "**/CHANGELOG.md",
     "**/node_modules/**",
     "**/package.json",
-    "**/*.md"
+    "**/*.md",
+    "**/*.test.*",
+    "**/*.stories.*"
   ],
   "packages": [
     "packages/*"
