@@ -16,7 +16,8 @@
     "version": {
       "conventionalCommits": true,
       "yes": true,
-      "message": "chore(package): bump the package version"
+      "message": "chore(package): bump the package version",
+      "allowBranch": "dev"
     }
   }
 }
