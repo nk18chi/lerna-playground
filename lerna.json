@@ -4,7 +4,9 @@
     "**/CHANGELOG.md",
     "**/node_modules/**",
     "**/package.json",
-    "**/*.md"
+    "**/*.md",
+    "**/*.test.*",
+    "**/*.stories.*"
   ],
   "packages": [
     "packages/*"
@@ -14,7 +16,8 @@
     "version": {
       "conventionalCommits": true,
       "yes": true,
-      "message": "chore(package): bump the package version"
+      "message": "chore(package): bump the package version",
+      "allowBranch": "dev"
     }
   }
 }
