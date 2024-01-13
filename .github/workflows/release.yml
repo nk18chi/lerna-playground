@@ -14,27 +14,27 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    # permissions:
-    #   contents: write
-    #   pull-requests: write
+    permissions:
+      contents: write
+      pull-requests: write
 
-    # if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
 
-    # steps:
-    #   - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    #   - uses: actions/setup-node@v4
-    #     with:
-    #       node-version: "20"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-    #   - name: NPM Install
-    #     run: npm install
+      - name: NPM Install
+        run: npm install
 
-    #   - name: Create a new commit to bump version
-    #     run: |
-    #       git config user.name "github-actions[bot]"
-    #       git config user.email "github-actions[bot]@users.noreply.github.com"
-    #       npx lerna version
+      - name: Create a new commit to bump version
+        run: |
+          # git config user.name "github-actions[bot]"
+          # git config user.email "github-actions[bot]@users.noreply.github.com"
+          npx lerna version --no-push
     #   - name: Create a release branch with pushing it to the remote
     #     run: |
     #       LAST_COMMIT_SHORT_ID=$(git rev-parse --short HEAD)
