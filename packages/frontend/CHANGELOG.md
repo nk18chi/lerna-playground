@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.24 (2024-01-13)
+
+
+### Bug Fixes
+
+* **workflow:** add --always ([66fdb7f](https://github.com/nk18chi/lerna-playground/commit/66fdb7f7e339c439cf86d0ff8b1f55cb8922c16e))
+
+
+
+
+
 ## 0.2.23 (2024-01-13)
 
 **Note:** Version bump only for package @nk18chi/frontend
