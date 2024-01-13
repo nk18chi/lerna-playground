@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git describe
+          git describe --always
           npx lerna version
     #   - name: Create a release branch with pushing it to the remote
     #     run: |
