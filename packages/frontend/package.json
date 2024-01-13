@@ -1,6 +1,6 @@
 {
   "name": "@nk18chi/frontend",
-  "version": "0.2.24",
+  "version": "0.2.25",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
