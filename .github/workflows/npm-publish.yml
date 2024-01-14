@@ -25,12 +25,12 @@ jobs:
         with:
           node-version: "20"
 
-      # - name: Generate .npmrc
-      #   run: |
-      #     echo @nk18chi:registry=https://npm.pkg.github.com/ >> .npmrc
-      #     echo //npm.pkg.github.com/:_authToken=${LERNA_PLAYGROUND_PACKAGE_TOKEN} >> .npmrc
-      #   env:
-      #     LERNA_PLAYGROUND_PACKAGE_TOKEN: ${{ secrets.LERNA_PLAYGROUND_PACKAGE_TOKEN }}
-      # - name: Publish packages with Lerna
-      #   run: |
-      #     npx lerna publish from-package --yes
+      - name: Generate .npmrc
+        run: |
+          echo @nk18chi:registry=https://npm.pkg.github.com/ >> .npmrc
+          echo //npm.pkg.github.com/:_authToken=${LERNA_PLAYGROUND_PACKAGE_TOKEN} >> .npmrc
+        env:
+          LERNA_PLAYGROUND_PACKAGE_TOKEN: ${{ secrets.LERNA_PLAYGROUND_PACKAGE_TOKEN }}
+      - name: Publish packages with Lerna
+        run: |
+          npx lerna publish from-package --yes
